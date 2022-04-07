@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Download Code
         uses: actions/checkout@v2
-        - name: SAST - horusec
+      - name: SAST - horusec
       run: |
         curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest
         horusec start -p="./" -e="true"
