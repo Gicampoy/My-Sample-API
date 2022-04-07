@@ -11,7 +11,7 @@ jobs:
       - name: Download Code
         uses: actions/checkout@v2
       - name: SAST - horusec
-      run: |
+      run:
         curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/main/deployments/scripts/install.sh | bash -s latest
         horusec start -p="./" -e="true"
       - name: DockerHub Login
